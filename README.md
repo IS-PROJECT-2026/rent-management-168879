@@ -2,10 +2,7 @@
 
 > A full-stack hostel billing system - C# API + Vanilla JS Portal
 
-[[Live](https://img.shields.io/badge/Live-GitHub%20Pages-brightgreen?style=for-the-badge&logo=github)](https://is-project-2026.github.io/rent-management-168879/)
-[[API](https://img.shields.io/badge/API-C%23%20on%20Render-blue?style=for-the-badge&logo=dotnet)](https://rent-management-168879.onrender.com)
-[[.NET](https://img.shields.io/badge/.NET-8.0-512BD4?style=for-the-badge&logo=dotnet)](#)
-[[Actions](https://img.shields.io/badge/Deploy%20wwwroot-Passing-success?style=for-the-badge&logo=github-actions)](https://github.com/IS-PROJECT-2026/rent-management-168879/actions)
+
 
 **Live Frontend:** https://is-project-2026.github.io/rent-management-168879/  
 **Live C# API:** https://rent-management-168879.onrender.com  
