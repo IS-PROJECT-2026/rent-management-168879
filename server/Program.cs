@@ -1,15 +1,9 @@
-using server.Services;
-
 var builder = WebApplication.CreateBuilder(args);
-
 builder.Services.AddControllers();
-builder.Services.AddSingleton<JsonFileService>();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddCors(o => o.AddPolicy("AllowAll", p => p.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
 
 var app = builder.Build();
-
-app.UseDefaultFiles();
-app.UseStaticFiles();
-
+app.UseCors("AllowAll");
 app.MapControllers();
-
 app.Run();
