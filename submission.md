@@ -32,16 +32,19 @@ D. One Thing Differently
 What: I would create .github/workflows/deploy.yml and set Pages source to GitHub Actions on Day 1, not at the end. Late setup caused failed deployment and caching issues.
 
 A. Milestones and Issues
-![alt text](image.png)
+<img width="1485" height="729" alt="image" src="https://github.com/user-attachments/assets/c8638fd8-9838-4572-bf57-01f01682786b" />
+
 Caption: Milestone v1.0 with 3 issues linked - API deployment, Pages action, and frontend loader fix
 
 B. Project Board
 C. Branching Architecture
-![alt text](image-1.png)
+<img width="1030" height="626" alt="image" src="https://github.com/user-attachments/assets/2f1f5666-47be-47ef-a448-5016cb17d43e" />
+
 D. Pull Requests & Traceability
 
 
-![alt text](image-2.png)
+<img width="1886" height="974" alt="image" src="https://github.com/user-attachments/assets/d83e8967-5a59-44b4-840e-2da74283f97c" />
+
 
 5. Merge Conflict Evidence
 Conflict 1 — Full Chronology
