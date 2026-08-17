@@ -1,1 +1,1 @@
-"Rent system - Version A from Branch A" 
+Rent system - Final merged version - combined A + B
