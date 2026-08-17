@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Rent Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hostel Rent Management Portal</h1>
+
+        <!-- Auth Section -->
+        <div id="authSection" class="card">
+            <div class="tabs">
+                <button id="loginTab" class="active" onclick="switchMode('login')">Login</button>
+                <button id="registerTab" onclick="switchMode('register')">Register</button>
+            </div>
+
+            <form id="authForm" onsubmit="handleAuth(event)">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <select id="roomType" class="hidden">
+                    <option value="twin">Twin - Rent 3000 | Power 2000 | Water 1000</option>
+                    <option value="cluster">Cluster - Rent 4000 | Power 3000 | Water 2000</option>
+                    <option value="studio">Studio - Rent 5000 | Power 4000 | Water 3000</option>
+                    <option value="priemum">Priemum - Rent 6000 | Power 5000 | Water 4000</option>
+                </select>
+                <button type="submit" id="authBtn">Login</button>
+            </form>
+            <p id="authMessage"></p>
+        </div>
+
+        <!-- Dashboard Section -->
+        <div id="dashboardSection" class="card hidden">
+            <h2>Welcome <span id="userEmail"></span></h2>
+            <p>Room: <strong id="userRoom"></strong> | Joined: <span id="dateJoined"></span> <button onclick="logout()">Logout</button></p>
+
+            <div class="pricing" id="pricingInfo"></div>
+
+            <div class="balances">
+                <div class="balance-card">
+                    <h3>Rent</h3>
+                    <p>Paid: KES <span id="rentPaid">0</span></p>
+                    <p>Balance: KES <span id="rentBalance">0</span></p>
+                    <p>Date: <span id="rentDate">-</span></p>
+                </div>
+                <div class="balance-card">
+                    <h3>Power</h3>
+                    <p>Paid: KES <span id="powerPaid">0</span></p>
+                    <p>Balance: KES <span id="powerBalance">0</span></p>
+                    <p>Date: <span id="powerDate">-</span></p>
+                </div>
+                <div class="balance-card">
+                    <h3>Water</h3>
+                    <p>Paid: KES <span id="waterPaid">0</span></p>
+                    <p>Balance: KES <span id="waterBalance">0</span></p>
+                    <p>Date: <span id="waterDate">-</span></p>
+                </div>
+            </div>
+
+            <form id="payForm" onsubmit="handlePay(event)">
+                <h3>Pay Bill</h3>
+                <select id="billType" required>
+                    <option value="rent">Rent</option>
+                    <option value="power">Power</option>
+                    <option value="water">Water</option>
+                </select>
+                <input type="number" id="amount" placeholder="Amount" min="1" required>
+                <button type="submit">Pay</button>
+            </form>
+            <p id="payMessage"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

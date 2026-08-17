@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using server.Models;
 using server.Services;
 
-namespace RentManagementSystem.Controllers;
+namespace server.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -87,22 +87,21 @@ public class RentController : ControllerBase
             case "rent":
                 tenant.RentPaid += dto.AmountPaid;
                 tenant.DateRentWasPaid = currentDate;
-                // Calculate balance if payment is less than standard cost
-                decimal expectedRent = pricing.Rent + tenant.RentBalance;
+                double expectedRent = pricing.Rent + tenant.RentBalance;
                 if (tenant.RentPaid < expectedRent)
                 {
                     tenant.RentBalance = expectedRent - tenant.RentPaid;
                 }
                 else
                 {
-                    tenant.RentBalance = 0; // Cleared or overpaid carried over
+                    tenant.RentBalance = 0;
                 }
                 break;
 
             case "power":
                 tenant.PowerPaid += dto.AmountPaid;
                 tenant.DatePowerWasPaid = currentDate;
-                decimal expectedPower = pricing.Power + tenant.PowerBalance;
+                double expectedPower = pricing.Power + tenant.PowerBalance;
                 if (tenant.PowerPaid < expectedPower)
                 {
                     tenant.PowerBalance = expectedPower - tenant.PowerPaid;
@@ -116,7 +115,7 @@ public class RentController : ControllerBase
             case "water":
                 tenant.WaterPaid += dto.AmountPaid;
                 tenant.DateWaterWasPaid = currentDate;
-                decimal expectedWater = pricing.Water + tenant.WaterBalance;
+                double expectedWater = pricing.Water + tenant.WaterBalance;
                 if (tenant.WaterPaid < expectedWater)
                 {
                     tenant.WaterBalance = expectedWater - tenant.WaterPaid;
