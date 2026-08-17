@@ -10,7 +10,6 @@
     <div class="container">
         <h1>Hostel Rent Management Portal</h1>
 
-        <!-- Auth Section -->
         <div id="authSection" class="card">
             <div class="tabs">
                 <button id="loginTab" class="active" onclick="switchMode('login')">Login</button>
@@ -24,19 +23,23 @@
                     <option value="twin">Twin - Rent 3000 | Power 2000 | Water 1000</option>
                     <option value="cluster">Cluster - Rent 4000 | Power 3000 | Water 2000</option>
                     <option value="studio">Studio - Rent 5000 | Power 4000 | Water 3000</option>
-                    <option value="priemum">Priemum - Rent 6000 | Power 5000 | Water 4000</option>
+                    <option value="premium">Premium - Rent 6000 | Power 5000 | Water 4000</option>
                 </select>
-                <button type="submit" id="authBtn">Login</button>
+                <button type="submit" id="authBtn">
+                    <span class="btn-text" id="authBtnText">Login</span>
+                    <span class="spinner hidden" id="authSpinner"></span>
+                </button>
             </form>
             <p id="authMessage"></p>
         </div>
 
-        <!-- Dashboard Section -->
         <div id="dashboardSection" class="card hidden">
             <h2>Welcome <span id="userEmail"></span></h2>
-            <p>Room: <strong id="userRoom"></strong> | Joined: <span id="dateJoined"></span> <button onclick="logout()">Logout</button></p>
+            <p>Room: <strong id="userRoom"></strong> | Joined: <span id="dateJoined"></span> <button onclick="logout()" style="width:auto; padding:6px 12px; background:#e74c3c; color:white; border:none; border-radius:6px; cursor:pointer; margin-left:10px;">Logout</button></p>
 
-            <div class="pricing" id="pricingInfo"></div>
+            <div class="pricing" id="pricingInfo">
+                <div class="loader-center"><span class="spinner dark"></span> Loading pricing...</div>
+            </div>
 
             <div class="balances">
                 <div class="balance-card">
@@ -67,7 +70,10 @@
                     <option value="water">Water</option>
                 </select>
                 <input type="number" id="amount" placeholder="Amount" min="1" required>
-                <button type="submit">Pay</button>
+                <button type="submit" id="payBtn">
+                    <span class="btn-text" id="payBtnText">Pay</span>
+                    <span class="spinner hidden" id="paySpinner"></span>
+                </button>
             </form>
             <p id="payMessage"></p>
         </div>
