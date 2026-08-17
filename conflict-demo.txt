@@ -1,1 +1,1 @@
-"This is base version for conflict 2" 
+This is modified version in Branch B for conflict 2
