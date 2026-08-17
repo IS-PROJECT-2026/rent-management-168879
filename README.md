@@ -1,2 +1,2 @@
-# Rent Management System - Branch A version
+# Rent Management System - Branch B version
 Rent-management System 
