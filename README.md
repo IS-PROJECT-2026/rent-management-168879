@@ -1,2 +1,2 @@
-# rent-management-168879
+# Rent Management System - Branch B version
 Rent-management System 
