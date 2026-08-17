@@ -37,6 +37,8 @@ A. Milestones and Issues
 Caption: Milestone v1.0 with 3 issues linked - API deployment, Pages action, and frontend loader fix
 
 B. Project Board
+<img width="1264" height="574" alt="image" src="https://github.com/user-attachments/assets/e845de0f-4694-49e0-ac87-43b530a120d9" />
+
 C. Branching Architecture
 <img width="1030" height="626" alt="image" src="https://github.com/user-attachments/assets/2f1f5666-47be-47ef-a448-5016cb17d43e" />
 
