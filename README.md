@@ -1,3 +1,3 @@
-# Rent Management System - Branch A version
+# Rent Management System - Main Portal
 
 Rent-management System
