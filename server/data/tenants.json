@@ -1,0 +1,6 @@
+﻿namespace server.data
+{
+    public class tenants
+    {
+    }
+}
