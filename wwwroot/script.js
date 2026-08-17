@@ -1,6 +1,4 @@
-const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-    ? 'http://localhost:5154'
-    : 'https://rent-management-168879.onrender.com'; // <-- change to your Render URL after deploy
+const API_URL = "https://rent-management-168879.onrender.com"
 
 let currentMode = 'login';
 let currentUser = null;
